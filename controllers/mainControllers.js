@@ -7,7 +7,6 @@ exports.home = (req, res) => {
 exports.detectDisease = (req, res) => {
   detectDisease(req.file)
     .then(result => {
-      res.json(result)
       console.log(result)
     })
     .catch(err => {
