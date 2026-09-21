@@ -5,11 +5,13 @@ exports.home = (req, res) => {
 }
 
 exports.detectDisease = (req, res) => {
+  console.log("Received file:", req.file)
   detectDisease(req.file)
     .then(result => {
       res.json(result)
     })
     .catch(err => {
+      console.log(err)
       res.status(500).json({ error: err.message })
     })
 }
