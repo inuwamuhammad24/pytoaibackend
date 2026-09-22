@@ -19,8 +19,9 @@ function fileToGenerativePart(imagePath, mimeType = "image/jpeg") {
 async function runGeminiVision(prompt, imagePart) {
   // Primary fast model with fallback to flash-lite if demand spikes
   const models = [
-    "gemini-flash-latest",
     "gemini-3.1-flash-lite",
+    "gemini-3.8-flash",
+    "gemini-flash-latest",
     "gemini-3.7-flash",
   ]
 
